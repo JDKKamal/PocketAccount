@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/small"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/tiny"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.jdkgroup.customviews.characterview.CharacterView
+                    android:id="@+id/characterView"
+                    android:layout_width="@dimen/dimen_character"
+                    android:layout_height="@dimen/dimen_character"
+                    app:backgroundColor="@color/colorPrimary"
+                    app:borderColor="@android:color/white"
+                    app:borderWidth="@dimen/extraTiny"
+                    app:shape="Circle"
+                    app:text=""
+                    app:textColor="@color/colorWhite"
+                    app:textSize="@dimen/large_text" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/appTvName"
+                            style="@style/TextSemiBoldSizeLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="@string/adp_name"
+                            android:textColor="@color/colorNormalText" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/tiny"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/TextSemiBoldSizeMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/rupees"
+                                android:textColor="@color/colorVerified" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/appTvCreditAmount"
+                                style="@style/TextRegularSizeMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/small"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@string/adp_credit_amount"
+                                android:textColor="@color/colorVerified" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="@dimen/iv"
+                            android:padding="@dimen/tiny"
+                            android:layout_height="@dimen/iv"
+                            app:srcCompat="@drawable/ic_edit" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="@dimen/iv"
+                            android:padding="@dimen/tiny"
+                            android:layout_height="@dimen/iv"
+                            app:srcCompat="@drawable/ic_delete" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/appTvDateTime"
+                    style="@style/TextRegularSizeMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tiny"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="@string/adp_date_time"
+                    android:textColor="@color/colorHintEditText" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/extraTinyLine"
+        android:background="@color/colorLine" />
+</LinearLayout>
+
+
+

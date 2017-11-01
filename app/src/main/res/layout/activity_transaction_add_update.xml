@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/custom_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/medium">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/appEdtTitle"
+                    style="@style/styleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/medium"
+                    android:hint="@string/hint_title"
+                    android:inputType="text"
+                    android:maxLines="1" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/appEdtAmount"
+                    style="@style/styleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/medium"
+                    android:hint="@string/hint_amount"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/appEdtDescription"
+                    style="@style/styleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/medium"
+                    android:hint="@string/hint_description"
+                    android:inputType="textPersonName"
+                    android:maxLines="1" />
+
+                <RadioGroup
+                    android:id="@+id/rgTransaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation='horizontal'>
+
+                    <RadioButton
+                        android:id="@+id/rbCredit"
+                        android:layout_width="wrap_content"
+                        style="@style/TextSemiBoldSizeRegular"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Credit (+)" />
+
+                    <RadioButton
+                        android:id="@+id/rbDebit"
+                        style="@style/TextSemiBoldSizeRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="@dimen/hugeSmall"
+                        android:layout_height="wrap_content"
+                        android:text="Debit (-)" />
+
+                </RadioGroup>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/appBtnSubmit"
+                    style="@style/ButtonTheme"
+                    android:layout_marginTop="@dimen/regularSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/huge"
+                    android:layout_marginRight="@dimen/small"
+                    android:text="@string/btn_submit" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
